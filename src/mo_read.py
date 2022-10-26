@@ -53,6 +53,10 @@ def get_profile_active(path):
         ConfigParser.add_section("General")
         ConfigParser.read(os.path.join(path, "ModOrganizer.ini"))
         profile_active = ConfigParser.get("General", "selected_profile")
+        
+        MO2_INI = "@ByteArray"
+        if profile_active[:len(MO2_INI)] == MO2_INI:
+            profile_active = profile_active[len(MO2_INI)+1:-1]
     except:
         pass
 
