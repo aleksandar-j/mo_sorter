@@ -45,7 +45,7 @@ def main():
     profile_pick.pack()
 
     sort_button = tkinter.Button(frame, text=SORT_MODS_BTN_TEXT, fg="red", padx=40, pady=10,
-                    command=lambda:sort.sort(mo_path, option.get(), mo_profiles, root))
+                    command=lambda:sort.sort(mo_path, option.get(), mo_profiles))
     sort_button.pack()
 
     help_button = tkinter.Button(frame, text=HELP_BTN_TEXT,
